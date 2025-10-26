@@ -1426,8 +1426,17 @@ img {
   height: auto;
 }
 
+.img-app {
+    height: 3.5rem;
+    margin-right: 1.5rem;
+}
+
+.div-img-app {
+    text-align: center;
+}
+
 .img-rounded {
-  border-radius: 6px;
+    border-radius: 6px;
 }
 
 .img-thumbnail {
