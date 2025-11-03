@@ -33,7 +33,7 @@
     <!-- Modernizr JS -->
     <!--<script src="js/bootstrap/bootstrap.min.js"></script>-->
     <script src="js/modernizr-2.6.2.min.js"></script>
-    <script src="jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.min.js"></script>
 </head>
 <body>
     <div id="fh5co-wrapper">
@@ -251,10 +251,10 @@
                                 <div class="couple-desc">
                                     <h3>Desplazamiento al convite</h3>
                                     <p>
-                                        Para que no tengáis que preocuparos por el camino, habrá un autobús que saldrá desde el Alcázar de Córdoba hacia los Jardines del Sansueña.
+                                        Habrá autobús del Alcázar a Sansueña para que todos lleguemos juntos al convite.
                                         <br />
-                                        Al terminar la fiesta, no habrá servicio de autobús de regreso, por lo que podréis volver en
-                                        taxi llamando al <a href="tel:+34957450000">957.45.00.00</a> o a través de la App <strong>pidetaxi</strong>.
+                                        A la vuelta no hay bus, pero como estamos dentro de Córdoba, lo más práctico será coger un taxi 
+                                        llamando al <a href="tel:+34957450000">957.45.00.00</a> o a través de la App <strong>pidetaxi</strong>.
                                     </p>
                                     <div class="div-img-app">
                                         <a href="https://apps.apple.com/es/app/pidetaxi/id737441460">
@@ -276,75 +276,82 @@
             <div id="fh5co-confirma" style="background-image: url(images/cover_bg_2.jpg); background-position: 0px" data-stellar-background-ratio="0.5">
                 <div class="overlay"></div>
                 <div class="container">
-                    <div class="row animate-box">
+                    <div id="titleConfirma" class="row animate-box" style="display:block">
                         <div class="col-md-9 col-md-offset-1 text-center heading-section">
                             <h2>¡Confirma tu asistencia!</h2>
                             <p>Por favor, confírmanos tu aistencia
                         </div>
                     </div>
-                    <div class="row animate-box">
+                    <div id="formConfirma" class="row animate-box" style="display:block">
                         <form class="form-inline" method="POST" data-email="bodaelenoli@gmail.com"
-                              action="https://script.google.com/macros/s/AKfycbySk-NVVrdiOjk6KVdFO-hO-Dmz-574XvFcSjVbFyMkA5JQMOzDcbVMOQRlJ-LBRla8-A/exec">
-                            <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
-                                <div class="form-group">
-                                    <label for="name" class="sr-only">Nombre y apellidos</label>
-                                    <input type="text" class="form-control" id="fname" placeholder="Nombre y apellidos">
-                                </div>
-                            </div>
-                            <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
-                                <div class="form-group">
-                                    <label for="acompanante" class="sr-only">Acompañantes</label>
-                                    <input type="text" class="form-control" id="acompanante" placeholder="Acompañantes">
-                                </div>
-                            </div>
-                            <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
-                                <div class="col-md-4 col-sm-10">
-                                    <input type="checkbox" id="switchNinnos" onclick="toggleBoxVisibility()">
-                                    <label for="switchNinnos">¿Nos acompañais con niños?</label>
-                                </div>
-                                <div class="col-md-3 col-sm-4">
-                                    <div id="groupCuantosNinnos" class="form-group" style="visibility: hidden">
-                                        <label for="cuantosNinnos" class="sr-only">¿Cuántos serán?</label>
-                                        <input type="number" class="form-control" id="cuantosNinnos" placeholder="¿Cuántos serán?">
+                              action="https://script.google.com/macros/s/AKfycbwjKSsl-01PHNfczETyNrIDFEmTiMnRLXs2tRncJV_-M0vS_RmIaJExxVzbKZtmLPG7/exec">
+                            <div class="form-elements">
+                                <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
+                                    <div class="form-group">
+                                        <label for="name" class="sr-only">Nombre y apellidos</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Nombre y apellidos">
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-sm-4">
-                                    <div id="groupMenuInfantil" class="form-group" style="visibility: hidden ">
-                                        <label for="menuInfantil" class="sr-only">¿Cuántos menús infantiles?</label>
-                                        <input type="number" class="form-control" id="menuInfantil" placeholder="¿Menú infantil?">
+                                <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
+                                    <div class="form-group">
+                                        <label for="acompanante" class="sr-only">Acompañantes</label>
+                                        <input type="text" class="form-control" id="acompanante" placeholder="Acompañantes">
                                     </div>
                                 </div>
-                                <div class="col-md-2 col-sm-3">
-                                    <div id="groupTrona" class="form-group" style="visibility: hidden">
-                                        <label for="trona" class="sr-only">¿Trona/s?</label>
-                                        <input type="number" class="form-control" id="trona" placeholder="¿Trona/s?">
+                                <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
+                                    <div class="col-md-4 col-sm-10">
+                                        <input type="checkbox" id="switchNinnos" onclick="toggleBoxVisibility()">
+                                        <label for="switchNinnos">¿Nos acompañais con niños?</label>
+                                    </div>
+                                    <div class="col-md-3 col-sm-4">
+                                        <div id="groupCuantosNinnos" class="form-group" style="display: none">
+                                            <label for="cuantosNinnos" class="sr-only">¿Cuántos serán?</label>
+                                            <input type="number" class="form-control" id="cuantosNinnos" placeholder="¿Cuántos serán?">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-4">
+                                        <div id="groupMenuInfantil" class="form-group" style="display: none">
+                                            <label for="menuInfantil" class="sr-only">¿Cuántos menús infantiles?</label>
+                                            <input type="number" class="form-control" id="menuInfantil" placeholder="¿Menú infantil?">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-3">
+                                        <div id="groupTrona" class="form-group" style="display: none">
+                                            <label for="trona" class="sr-only">¿Trona/s?</label>
+                                            <input type="number" class="form-control" id="trona" placeholder="¿Trona/s?">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
-                                <div class="form-group">
-                                    <label for="alergias" class="sr-only">Alergias</label>
-                                    <input type="text" class="form-control" id="alergias" placeholder="Alergias">
+                                <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
+                                    <div class="form-group">
+                                        <label for="alergias" class="sr-only">Alergias</label>
+                                        <input type="text" class="form-control" id="alergias" placeholder="Alergias">
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
-                                <div class="form-group">
-                                    <label for="transporte" class="sr-only">Servicio de autobús / Coche propio</label>
-                                    <input type="text" class="form-control" id="transporte" placeholder="Servicio de autobús / Coche propio">
+                                <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
+                                    <div class="form-group">
+                                        <label for="transporte" class="sr-only">Servicio de autobús / Coche propio</label>
+                                        <input type="text" class="form-control" id="transporte" placeholder="Servicio de autobús / Coche propio">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
-                                <div class="form-group">
-                                    <label for="observaciones" class="sr-only">Observaciones</label>
-                                    <textarea rows="5" class="form-control" id="observaciones" placeholder="Observaciones"></textarea>
+                                <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
+                                    <div class="form-group">
+                                        <label for="observaciones" class="sr-only">Observaciones</label>
+                                        <textarea rows="5" class="form-control" id="observaciones" placeholder="Observaciones"></textarea>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-4 col-md-offset-4 col-sm-offset-4">
                                 <button type="submit" class="btn btn-primary btn-block" value="Submit">¡Voy a asistir!</button>
                             </div>
                         </form>
+                    </div>
+                    <div id="thankyouMessage" class="text-center heading-section" style="display:none">
+                        <h2>
+                            ¡Gracias por confirmar tu asistencia a nuestra boda! Nos hace muy felices contar con tu presencia en este día tan especial
+                        </h2>
                     </div>
                 </div>
             </div>
@@ -356,8 +363,14 @@
                             <div class="col-md-12 text-center">
                                 <h2>Elena &amp; Oliver</h2>
                             </div>
-                            <div class="col-md-6 col-md-offset-3 text-center">
-                                <p>Copyright 2025. All Rights Reserved.</p>
+                            <div class="col-md-12 text-center p-present">
+                                <p>
+                                    Regalo de boda no hace falta lista ni envoltorios: ya tenemos casi todo.
+                                    <br />
+                                    Si queréis tener un detalle, el banco estará encantado de recibir vuestro cariño por nosotros.
+                                    <br />
+                                    <strong>ES46 3009 2810 8062 7497 8358</strong>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -366,8 +379,6 @@
         </div>
 
     </div>
-    <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
     <!-- jQuery -->
     <script src="dist/scripts.min.js"></script>
     <!-- form-submission-handler -->
