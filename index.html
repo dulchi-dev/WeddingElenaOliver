@@ -288,8 +288,9 @@
                             <div class="form-elements">
                                 <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
                                     <div class="form-group">
-                                        <label for="name" class="sr-only">Nombre y apellidos</label>
+                                        <label id="labelName" for="name" class="sr-only">Nombre y apellidos</label>
                                         <input type="text" class="form-control" id="name" placeholder="Nombre y apellidos">
+                                        <p id="ErrorName" style="display: none; color:#df5e5e; font-weight:bold">Este campo es obligatorio</p>
                                     </div>
                                 </div>
                                 <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">
@@ -334,6 +335,7 @@
                                     <div class="form-group">
                                         <label for="transporte" class="sr-only">Servicio de autobús / Coche propio</label>
                                         <input type="text" class="form-control" id="transporte" placeholder="Servicio de autobús / Coche propio">
+                                        <p id="ErrorTransporte" style="display: none; color:#df5e5e; font-weight:bold">Este campo es obligatorio</p>
                                     </div>
                                 </div>
                                 <div class="col-md-10 col-sm-10 col-md-offset-1 col-sm-offset-1">

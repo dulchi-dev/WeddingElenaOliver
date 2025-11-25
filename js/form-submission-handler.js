@@ -42,28 +42,41 @@
     }
 
     function handleFormSubmit(event) {  // handles form submit without any jquery
+        debugger;
+        document.getElementById("ErrorName").style.display = "none";
+        document.getElementById("ErrorTransporte").style.display = "none";
+
         event.preventDefault();           // we are submitting via xhr below
         var form = event.target;
         var formData = getFormData(form);
         var data = formData.data;
 
-        disableAllButtons(form);
-        var url = form.action;
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', url);
-        // xhr.withCredentials = true;
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 2 && xhr.status === 200) {
-                form.reset();
-                VisibilityThankyouMessage();
-            }
-        };
-        // url encode form data for sending as post data
-        var encoded = Object.keys(data).map(function (k) {
-            return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-        }).join('&');
-        xhr.send(encoded);
+        if (data.fname != '' && data.transporte != '') {
+            disableAllButtons(form);
+            var url = form.action;
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', url);
+            // xhr.withCredentials = true;
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 2 && xhr.status === 200) {
+                    form.reset();
+                    VisibilityThankyouMessage();
+                }
+            };
+            // url encode form data for sending as post data
+            var encoded = Object.keys(data).map(function (k) {
+                return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+            }).join('&');
+            xhr.send(encoded);
+
+        }
+        else {
+            if (data.fname == '')
+                document.getElementById("ErrorName").style.display = "block";
+            if (data.transporte == '')
+                document.getElementById("ErrorTransporte").style.display = "block";
+        }
     }
 
     function loaded() {
